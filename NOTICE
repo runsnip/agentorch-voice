@@ -1,0 +1,14 @@
+AgentOrch voice — the optional text-to-speech engine of AgentOrch.
+
+No model is bundled: each language is a pack downloaded when the user turns it on.
+
+Vietnamese: VieNeu-TTS (Apache-2.0), © pnnbao97 — https://github.com/pnnbao97/VieNeu-TTS,
+whose model files are downloaded from Hugging Face (pnnbao-ump/VieNeu-TTS-v3-Turbo, Apache-2.0) on first use.
+Only the model's preset voices are used (recorded with their speakers' consent); no one's voice is cloned.
+The bundled Python is python-build-standalone (PSF licence); the libraries keep their own licences.
+
+English: Kokoro-82M (Apache-2.0, hexgrad — https://huggingface.co/hexgrad/Kokoro-82M), its ONNX files from
+kokoro-onnx (MIT, thewh1teagle — https://github.com/thewh1teagle/kokoro-onnx). Phonemes come from espeak-ng
+(GPL-3.0-or-later, https://github.com/espeak-ng/espeak-ng — source there), a separate library shipped as is in the
+espeakng-loader package; phonemizer-fork is GPL-3.0 too. The reader runs as its own process: AgentOrch talks to it
+through pipes only.
